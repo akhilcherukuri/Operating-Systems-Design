@@ -67,11 +67,12 @@ bool checkcol(int ** m, int rn,int cn);
          }
          rn=rn+3;}
      if(rc==1 && cc==1&&rowc==1){
+         cout<<"Number of valid threads: 1"<<endl;
          cout<<"The following is a valid solution to the sudoku puzzle"<< endl;    
      }
     steady_clock::time_point end_time = steady_clock::now();
-    long time_taken=duration_cast<milliseconds>(end_time - start_time).count();
-    cout<<"Total Time Taken for Sudoku puzzle validation without using threading is "<<time_taken<<"ms"<<endl;
+    long time_taken=duration_cast<nanoseconds>(end_time - start_time).count();
+    cout<<"Total Time Taken for Sudoku puzzle validation is "<<time_taken<<"ns"<<endl;
  }
  /** fucntion to check if input array has all the variables from 1-9
   * @params: int*m int array pointer to the array to be checked

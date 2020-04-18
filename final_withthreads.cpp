@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <fstream>
 #include <pthread.h>
@@ -102,16 +101,16 @@ void *  checkcol(void* m);
     }
     // confirming that parts of the sudoku puzlle are valid and thus confirming the validity of the solution. 
     if(rescountfin==9 && rvalid==1 && cvalid==1){
-        cout<<"all valid thread: "<<rescountfin+rvalid+cvalid<<endl;
-        cout<<"The following is a valid solution to a sudoku puzzle"<<endl;
+        cout<<"Number of valid threads: "<<rescountfin+rvalid+cvalid<<endl;
+        cout<<"The following is a valid solution to the sudoku puzzle"<<endl;
 
     }
     else{
         cout<<"The following is an invalid solution to the sudoku puzzle "<<endl;
     }
     steady_clock::time_point end_time = steady_clock::now();
-    long time_taken=duration_cast<milliseconds>(end_time - start_time).count();
-    cout<<"Total Time Taken for Sudoku puzzle validation is "<<time_taken<<"ms"<<endl;
+    long time_taken=duration_cast<nanoseconds>(end_time - start_time).count();
+    cout<<"Total Time Taken for Sudoku puzzle validation is "<<time_taken<<"ns"<<endl;
 
 
     
