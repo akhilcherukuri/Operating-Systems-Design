@@ -61,7 +61,7 @@ bool checkcol(int ** m, int rn,int cn);
              cn=cn+3;
              //cout<<rn<<"  "<<cn<<"  "<<endl;
              if(rowc==0){
-                  cout<<"The Following is an invalid solution to the sudoku puzzle";
+                  cout<<"The Following is an invalid solution to the sudoku puzzle"<< endl;
                     break;
              }
          }
